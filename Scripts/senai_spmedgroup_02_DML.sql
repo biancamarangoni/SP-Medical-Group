@@ -20,16 +20,45 @@ VALUES (1, 'Saulo', 'saulo1@gmail.com', 'saulo182'),
 GO
 
 INSERT INTO Endereco (CEP,estado,cidade,bairro,rua,numero)
-VALUES ('07987-022', 'SP', 'Osasco', 'Jardim das Flores', 'João Avelar', '598'),
-	   ('35273-679', 'SP', 'São Paulo',	'Pinheiros', 'Rua das Pedras', '225'),
-	   ('16372-256', 'SP',	'São Paulo', 'Jaraguá',	'Av. Alexio Jafet',	'847'),
-	   ('16279-927', 'SP',	'Mogi das Cruzes', 'Vila Mogi Moderno', 'Francisco Urizzi',	'136'),
-	   ('82629-055', 'SP',	'Caieras',	'Jardim São Francisco',	'Miguel Candido', '485'),
-	   ('45783-823', 'SP',	'São Paulo', 'Perus', 'Rua da Ladeira', '96'),
-	   ('21638-367', 'SP',	'São Paulo', 'Consolação',	'Av. Paulista',	'1274'),
-		('26328-273', 'SP',	'Suzano', 'Vila Figueira',	'Av. Dos Santos', '903'),
-		('21342-490', 'SP',	'Mogi das Cruzes',	'Vila Natal',	'Rua Charles Mion',	'378'),
-		('95739-274', 'SP',	'Osasco', 'Pestana', 'Av. dos Bandeirantes', '563'),
-		('36583-375', 'SP',	'Diadema',	'Jardim Elisa',	'Rua. Jaruga',	'103');
+VALUES ('87352-78', 'SP', 'Osasco', 'Jardim das Flores', 'João Avelar', '598'),
+	   ('35273-79', 'SP', 'São Paulo',	'Pinheiros', 'Rua das Pedras', '225'),
+	   ('16372-56', 'SP',	'São Paulo', 'Jaraguá',	'Av. Alexio Jafet',	'847'),
+	   ('16279-27', 'SP',	'Mogi das Cruzes', 'Vila Mogi Moderno', 'Francisco Urizzi',	'136'),
+	   ('82629-55', 'SP',	'Caieras',	'Jardim São Francisco',	'Miguel Candido', '485'),
+	   ('45783-23', 'SP',	'São Paulo', 'Perus', 'Rua da Ladeira', '96'),
+	   ('21438-67', 'SP',	'São Paulo', 'Consolação',	'Av. Paulista',	'1274'),
+		('26328-73', 'SP',	'Suzano', 'Vila Figueira',	'Av. Dos Santos', '903'),
+		('21342-90', 'SP',	'Mogi das Cruzes',	'Vila Natal',	'Rua Charles Mion',	'378'),
+		('95739-74', 'SP',	'Osasco', 'Pestana', 'Av. dos Bandeirantes', '563'),
+		('36583-75', 'SP',	'Diadema',	'Jardim Elisa',	'Rua. Jaruga',	'103');
 GO
+
+INSERT INTO Clinica (idEndereco,nomeFantasia,CNPJ,razaoSocial,horaAbertura,horaFechamento)
+VALUES ('7', 'Clínica Paulista', '87293710092773','SP Medical Group', '8h', '22h');
+GO
+
+INSERT INTO Situacao (tipoStatus)
+VALUES ('Confirmada'),
+	   ('Cancelada');
+GO
+
+INSERT INTO Especialidade (nomeEspecialidade)
+VALUES ('Pediatria'), ('Odontologia'), ('Gastrenterologia'), ('Infectologia'), ('Dermatologia');
+GO
+
+INSERT INTO Medico (idUsuario,idClinica,idEspecialidade,nomeMedico)
+VALUES ('1', '1', '3', 'Saulo'),
+	   ('2', '1', '4', 'Julya'),
+	   ('8', '1', '1', 'Laura'),
+	   ('9', '1', '5', 'Diego'),
+	   ('10', '1', '2', 'Luiz');
+GO
+
+INSERT INTO Consulta (idPaciente,idMedico,idSituacao,dataConsulta)
+VALUES ('2', '2', '1', '10/09/2021'),
+	   ('4', '5', '1', '27/08/2021'),
+	   ('1', '1', '2', '24/08/2021'),
+	   ('3', '4', '1',	'05/09/2021');
+GO
+
 
