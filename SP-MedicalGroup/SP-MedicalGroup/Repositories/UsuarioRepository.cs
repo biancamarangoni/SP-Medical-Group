@@ -1,4 +1,5 @@
-﻿using SP_MedicalGroup.Domains;
+﻿using SP_MedicalGroup.Context;
+using SP_MedicalGroup.Domains;
 using SP_MedicalGroup.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,12 @@ namespace SP_MedicalGroup.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        SPMediContext ctx = new SPMediContext();
         public Usuario Login(string email, string senha)
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+
+            
         }
     }
 }

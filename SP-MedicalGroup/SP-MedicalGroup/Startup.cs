@@ -34,6 +34,16 @@ namespace SP_MedicalGroup
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+
+            services
+                .AddAuthentication(options => {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBearer";
+                })
+
+                .AddJwtBearer("JwtBearer", options => {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                 })
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
