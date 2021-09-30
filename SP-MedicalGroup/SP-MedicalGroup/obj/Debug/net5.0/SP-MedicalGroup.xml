@@ -4,5 +4,13 @@
         <name>SP-MedicalGroup</name>
     </assembly>
     <members>
+        <member name="M:SP_MedicalGroup.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">Email do usuario</param>
+            <param name="senha">senha do usuario</param>
+            <returns>um objeto do tipo Usuario que foi encontrado</returns>
+        </member>
     </members>
 </doc>
