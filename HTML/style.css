@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header{
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+}
+
+.BarraHeader a{
+    color: white;
+    font-family: 'Arsenal', sans-serif;;
+}
