@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Gayathri:wght@100&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,19 +10,67 @@
 .Logo{
     width: 226px;
     height: 49px;
-    top: 11px;
-    left: 59px; 
 }
 
 header{
     background: rgba(0, 0, 0, 0.6);
+    /*opacity: 30%;*/
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 71px;
+    align-items: center;
+    padding: 0% 50px;
+    position: absolute;
 }
 
 .BarraHeader a{
     color: white;
     font-family: 'Arsenal', sans-serif;;
+}
+
+.telainicio{
+    background-image: url(./img/andrew-coop-yWjTC7efJBs-unsplash\ 1.png);
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LogoInicio{
+    width: 220px;
+    height: 230px;
+    
+}
+
+.telainicio div h1{
+    font-family: 'Gayathri', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.telainicio div h2{
+    font-family: 'Gayathri', sans-serif;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.itenscentro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carrosel{
+    background-image: url(./img/Rectangle\ 4.png);
+    height: 215px;
 }
