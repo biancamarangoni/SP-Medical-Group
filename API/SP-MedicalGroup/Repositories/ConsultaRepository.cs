@@ -13,6 +13,10 @@ namespace SP_MedicalGroup.Repositories
     {
         private SPMediContext ctx = new SPMediContext();
 
+        /// <summary>
+        /// cadastra um usuario novo
+        /// </summary>
+        /// <param name="novoCadastro"></param>
         public void Consulta(Consultum novoCadastro)
         {
             // adiciona uma nova consulta
@@ -21,6 +25,15 @@ namespace SP_MedicalGroup.Repositories
             // salva as informações para serem salvas no banco
             ctx.SaveChanges();
 
+        }
+
+        public void CancelarConsulta(Consultum cancelar)
+        {
+            // cancela um agendamento
+            ctx.Consulta.Update(cancelar);
+
+            // salva a alteração de status do agendamento
+            ctx.SaveChanges();
         }
     }
 }

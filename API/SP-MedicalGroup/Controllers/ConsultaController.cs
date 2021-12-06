@@ -38,5 +38,20 @@ namespace SP_MedicalGroup.Controllers
             }
 
         }
+
+        [HttpPost]
+        public IActionResult CancelarAgendamento(Consultum cancelar)
+        {
+            try
+            {
+                _consultaRepository.CancelarConsulta(cancelar);
+
+                return StatusCode(302);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
     }
 }
