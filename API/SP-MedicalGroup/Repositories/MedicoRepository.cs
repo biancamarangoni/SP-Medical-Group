@@ -10,7 +10,6 @@ namespace SP_MedicalGroup.Repositories
     public class MedicoRepository : IMedicoRepository
     {
         SPMediContext ctx = new SPMediContext();
-
-        public void Listar()
+        public void Listar();
     }
 }

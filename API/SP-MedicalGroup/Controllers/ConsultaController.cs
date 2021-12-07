@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SP_MedicalGroup.Context;
 using SP_MedicalGroup.Domains;
 using SP_MedicalGroup.Interfaces;
 using SP_MedicalGroup.Repositories;
@@ -14,6 +15,8 @@ namespace SP_MedicalGroup.Controllers
     [ApiController]
     public class ConsultaController : ControllerBase
     {
+        SPMediContext ctx = new SPMediContext();
+
         private IConsultaRepository _consultaRepository { get; set; }
 
         public ConsultaController()
@@ -27,7 +30,7 @@ namespace SP_MedicalGroup.Controllers
             try
             {
                 //chama o método
-                _consultaRepository.Consulta(consulta);
+                _consultaRepository.();
 
                 //retorna um status code
                 return StatusCode(201);
@@ -40,11 +43,12 @@ namespace SP_MedicalGroup.Controllers
         }
 
         [HttpPost]
-        public IActionResult CancelarAgendamento(Consultum cancelar)
+        public IActionResult CancelarAgendamento(int id, Consultum consultaCancelada)
         {
+            
             try
             {
-                _consultaRepository.CancelarConsulta(cancelar);
+                _consultaRepository.CancelarConsulta(consultaCancelada);
 
                 return StatusCode(302);
             }

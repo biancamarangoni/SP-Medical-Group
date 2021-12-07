@@ -17,7 +17,7 @@ namespace SP_MedicalGroup.Repositories
         /// cadastra um usuario novo
         /// </summary>
         /// <param name="novoCadastro"></param>
-        public void Consulta(Consultum novoCadastro)
+        public void Consulta(int id, Consultum novoCadastro)
         {
             // adiciona uma nova consulta
             ctx.Consulta.Add(novoCadastro);
@@ -27,13 +27,20 @@ namespace SP_MedicalGroup.Repositories
 
         }
 
-        public void CancelarConsulta(Consultum cancelar)
+        public void CancelarConsulta(int id, Consultum consultaCancelada)
         {
+            Consultum consultaBuscada = ctx.Consulta.Find(id);
+
+            consultaBuscada.IdSituacao = consultaCancelada.IdSituacao;
+
             // cancela um agendamento
-            ctx.Consulta.Update(cancelar);
+            ctx.Consulta.Update(consultaBuscada);
 
             // salva a alteração de status do agendamento
             ctx.SaveChanges();
         }
+
+     
+    
     }
 }
