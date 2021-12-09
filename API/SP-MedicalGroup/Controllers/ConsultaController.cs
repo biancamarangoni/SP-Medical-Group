@@ -30,7 +30,7 @@ namespace SP_MedicalGroup.Controllers
             try
             {
                 //chama o método
-                _consultaRepository.();
+                _consultaRepository.Consulta(consulta);
 
                 //retorna um status code
                 return StatusCode(201);
@@ -48,7 +48,7 @@ namespace SP_MedicalGroup.Controllers
             
             try
             {
-                _consultaRepository.CancelarConsulta(consultaCancelada);
+                _consultaRepository.CancelarConsulta(id, consultaCancelada);
 
                 return StatusCode(302);
             }

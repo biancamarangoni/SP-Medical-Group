@@ -17,7 +17,7 @@ namespace SP_MedicalGroup.Repositories
         /// cadastra um usuario novo
         /// </summary>
         /// <param name="novoCadastro"></param>
-        public void Consulta(int id, Consultum novoCadastro)
+        public void Consulta(Consultum novoCadastro)
         {
             // adiciona uma nova consulta
             ctx.Consulta.Add(novoCadastro);

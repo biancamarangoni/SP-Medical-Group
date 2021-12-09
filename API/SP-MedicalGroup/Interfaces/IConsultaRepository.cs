@@ -8,7 +8,7 @@ namespace SP_MedicalGroup.Interfaces
 {
     interface IConsultaRepository
     {
-        void Consulta(int id, Consultum consultaCancelada);
+        void Consulta(Consultum consultaCancelada);
         void CancelarConsulta(int id, Consultum consultaCancelada);
     }
 }
