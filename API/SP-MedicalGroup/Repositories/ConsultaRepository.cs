@@ -1,4 +1,5 @@
-﻿using SP_MedicalGroup.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using SP_MedicalGroup.Context;
 using SP_MedicalGroup.Domains;
 using SP_MedicalGroup.Interfaces;
 using System;
@@ -40,7 +41,13 @@ namespace SP_MedicalGroup.Repositories
             ctx.SaveChanges();
         }
 
-     
-    
+        public List<Consultum> Listar()
+        {
+            return ctx.Consulta
+                .Include(e => e.IdPacienteNavigation)
+                .Include(e => e.IdMedicoNavigation)
+                .Include(e => e.IdSituacaoNavigation)
+                .ToList();
+        }
     }
 }

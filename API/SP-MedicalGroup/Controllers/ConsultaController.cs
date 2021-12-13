@@ -57,5 +57,14 @@ namespace SP_MedicalGroup.Controllers
                 return BadRequest(ex);
             }
         }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            try
+            {
+                return Ok(_consultaRepository.Listar());
+            }
+        }
     }
-}
+}      
