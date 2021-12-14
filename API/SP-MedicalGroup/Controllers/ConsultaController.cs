@@ -59,11 +59,15 @@ namespace SP_MedicalGroup.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult ListarConsultas()
         {
             try
             {
-                return Ok(_consultaRepository.Listar());
+                return Ok(_consultaRepository.ListarConsultas());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
             }
         }
     }

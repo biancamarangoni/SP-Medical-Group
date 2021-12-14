@@ -1,4 +1,5 @@
 ﻿using SP_MedicalGroup.Context;
+using SP_MedicalGroup.Domains;
 using SP_MedicalGroup.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,5 @@ namespace SP_MedicalGroup.Repositories
         {
 
         }
-           
     }
 }

@@ -41,13 +41,13 @@ namespace SP_MedicalGroup.Repositories
             ctx.SaveChanges();
         }
 
-        public List<Consultum> Listar()
+        public List<Consultum> ListarConsultas(List<Consultum> listaDeConsultas)
         {
             return ctx.Consulta
                 .Include(e => e.IdPacienteNavigation)
-                .Include(e => e.IdMedicoNavigation)
                 .Include(e => e.IdSituacaoNavigation)
+                .Include(e => e.IdMedicoNavigation)
                 .ToList();
         }
     }
-}
+}     

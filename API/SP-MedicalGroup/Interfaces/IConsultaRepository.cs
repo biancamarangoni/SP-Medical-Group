@@ -10,5 +10,6 @@ namespace SP_MedicalGroup.Interfaces
     {
         void Consulta(Consultum consultaCancelada);
         void CancelarConsulta(int id, Consultum consultaCancelada);
+        public void ListarConsultas(List<Consultum> listaDeConsultas);
     }
 }
