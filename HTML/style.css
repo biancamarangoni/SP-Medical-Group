@@ -36,15 +36,14 @@ header{
     background-size: cover;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-top: 71px;
 }
 
 .LogoInicio{
     width: 220px;
-    height: 230px;
-    
+    height: 230px; 
 }
 
 .telainicio div h1{
@@ -69,17 +68,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.carrosel{
-    background-image: url(./img/Group\ 2.png);
-    height: 215px;
-    width: 100%;
-    margin-top: 60px;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
 }
 
 .texto{
@@ -97,20 +86,62 @@ header{
     width: 250px;
 }
 
-.imgcalen{
-    height: 130px;
-    width: 130px;
-}
-
-.bannerCarrossel{
-    display: flex;
-    align-items: center;
-    width: 42%;
-    justify-content: space-between;
-}
-
 .login{
+    display: flex;
+    justify-content: center;
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
-    
+    flex-direction: column;
+    align-items: center;
+    width: 540px;
+}
+
+.form_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 188px;
+}
+
+.login_text{
+    font-family: Gayathri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 61px;
+    color: #81DF99;
+}
+
+.botao{
+    background: #FFFFFF;
+    opacity: 0.5;
+    border-radius: 20px;
+    width: 170px;
+    height: 45px;
+}
+
+
+.input_email{
+    display: flex;
+
+    width: 320px;
+    height: 39px;
+    left: 943px;
+    top: 399px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    border-radius: 15px;
+}
+
+.input_senha{
+    display: flex;
+
+    width: 320px;
+    height: 39px;
+    left: 943px;
+    top: 399px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    border-radius: 15px;
 }
