@@ -30,7 +30,7 @@ header{
 }
 
 .telainicio{
-    background-image: url(./img/andrew-coop-yWjTC7efJBs-unsplash\ 1.png);
+    background-image: url("../img/andrew-coop-yWjTC7efJBs-unsplash 1.png");
     height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +58,7 @@ header{
 .telainicio div h2{
     font-family: 'Gayathri', sans-serif;
     font-weight: normal;
-    color: black;
+    color: white;
     font-size: 20px;
     line-height: 24px;
 }
