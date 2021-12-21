@@ -33,7 +33,7 @@ namespace Senai.SpMedicalGroup.WebApi.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=NOTE0113G5\\SQLEXPRESS; Initial Catalog=SP_MEDICAL_GROUP; user id=sa; pwd=Senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=NOTE0113G5\\SQLEXPRESS; Initial Catalog=SPMedicalGroup; user id=sa; pwd=Senai@132;");
             }
         }
 

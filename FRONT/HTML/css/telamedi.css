@@ -72,3 +72,19 @@ header{
     height: 325px;
     margin: 0 auto;
 }
+
+.rodape{
+    height: 40px;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textrodape{
+    font-family: Gayathri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
